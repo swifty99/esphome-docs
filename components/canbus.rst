@@ -241,13 +241,13 @@ For wiring up the MSP2515 please refer to the section below.
         can_id: 4
         bit_rate: 50kbps
         on_frame:
-        - can_id: 500
+          - can_id: 500
             then:
             - lambda: |-
                 std::string b(x.begin(), x.end());
                 ESP_LOGD("canid 500", "%s", &b[0] );
             - light.turn_off: light_1
-        - can_id: 501
+          - can_id: 501
             then:
             - light.turn_on:
                 id: light_1
