@@ -54,9 +54,11 @@ ESPHome does support Mac & will run with no problem.
 Recommended installation is via `Homebrew <https://brew.sh/>`_:
 
 .. code-block:: console
+
     $ brew install esphome
 
 Verify the installation:
+
 .. code-block:: console
 
     $ esphome version
