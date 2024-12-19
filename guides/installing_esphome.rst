@@ -51,9 +51,20 @@ Mac
 
 ESPHome does support Mac & will run with no problem.
 
-Recommended installation is via `brew <https://formulae.brew.sh/formula/esphome>`_.
+Recommended installation is via `Homebrew <https://brew.sh/>`_:
 
+.. code-block:: console
+    $ brew install esphome
 
+Verify the installation:
+.. code-block:: console
+
+    $ esphome version
+    Version: 2024.12.0  # Version number may vary
+
+If you encounter any issues with Homebrew installation, please check the
+`ESPHome Homebrew Formula <https://formulae.brew.sh/formula/esphome>`_ page
+for additional information.
 
 Linux
 -----
