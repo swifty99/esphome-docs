@@ -49,9 +49,9 @@ with the following:
 Mac
 ---
 
-ESPHome does support Mac & will run with no problem.
+ESPHome supports macOS and will run without issues.
 
-Recommended installation is via `Homebrew <https://brew.sh/>`_:
+An easy way for installation is via `Homebrew <https://brew.sh/>`_:
 
 .. code-block:: console
 
@@ -62,11 +62,24 @@ Verify the installation:
 .. code-block:: console
 
     $ esphome version
-    Version: 2024.12.0  # Version number may vary
+    Version: 2024.12.0 
 
 If you encounter any issues with Homebrew installation, please check the
 `ESPHome Homebrew Formula <https://formulae.brew.sh/formula/esphome>`_ page
 for additional information.
+
+Note that Homebrew may not always provide the latest version immediately. 
+For the latest version, use the pip installation. This may be more difficult to set up
+and may need additional dependencies and path settings.
+
+Install Python from the official site. Then, install ESPHome with 
+``pip3 install esphome``. You can then test that things are properly installed with 
+the following:
+
+.. code-block:: console
+
+    $ esphome version
+    Version: 2024.12.4
 
 Linux
 -----
