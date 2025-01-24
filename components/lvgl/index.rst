@@ -10,13 +10,20 @@ embedded graphics library to create beautiful UIs for any MCU, MPU and display t
 
 .. figure:: /components/lvgl/images/lvgl_main_screenshot.png
 
+Prerequisites
+-------------
+
 To use LVGL with a :ref:`display <display-hw>` in ESPHome, you'll need an ESP32 or RP2040. PSRAM is not a strict requirement but it is generally recommended, especially for large color displays.
 
-The graphic display should be configured with ``auto_clear_enabled: false`` and ``update_interval: never``, and should not have any ``lambda`` set.
+The graphic display should be configured with ``auto_clear_enabled: false`` and should not have any ``lambda`` set. The LVGL component will take care of the display rendering. For most displays, the ``update_interval`` should be set to ``never``, but note that some displays such as OLED and ePaper will need the update interval set to a suitable value.
 
 For interactivity, a :doc:`Touchscreen </components/touchscreen/index>` (capacitive highly preferred), a :doc:`/components/sensor/rotary_encoder` or a custom keypad made up from discrete :doc:`Binary Sensors </components/binary_sensor/index>` can be used.
 
 Check out the detailed examples in :ref:`the Cookbook <lvgl-cookbook>` which demonstrate a number of ways you can integrate your environment with LVGL and ESPHome.
+
+
+TL;DR
+-----
 
 To get started, it is sufficient to add a display and an empty LVGL configuration. If neither ``pages`` nor ``widgets`` is specified, then a default "hello world" page will be shown.
 
@@ -24,6 +31,26 @@ To get started, it is sufficient to add a display and an empty LVGL configuratio
 
     # Example minimal configuration entry
     lvgl:
+
+    display:
+      - platform: ...
+        # ...
+        auto_clear_enabled: false
+        update_interval: never
+
+To make LVGL your own you will need to add widgets to the display. For example, to show a label with the text "Hello World!" in the center of the screen:
+
+.. code-block:: yaml
+
+    lvgl:
+      widgets:
+        - label:
+            align: CENTER
+            text: 'Hello World!'
+
+
+
+Now read on to learn more about the configuration options and how to customize your LVGL display.
 
 Basics
 ------
