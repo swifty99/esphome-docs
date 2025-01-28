@@ -76,6 +76,7 @@ If you encounter any issues with Homebrew installation, please check the
 for additional information.
 
 .. note::
+
     Homebrew may not always provide the latest version immediately. Updating Homebrew will 
     automatically update ESPHome. If this is ok for you, Homebrew is the easiest way to 
     install ESPHome.
@@ -86,7 +87,6 @@ For the latest version, use the pip installation. This may be more difficult to 
 and may need additional dependencies and path settings. Setting up a virtual environment is 
 more or less mandatory. If you are not familiar with Python virtual environments, Homebrew 
 is the recommended way.
-
 
 Install Python from and create a virtual environment. Then, install ESPHome with 
 ``pip3 install esphome``. 
