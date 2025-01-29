@@ -85,16 +85,21 @@ for additional information.
 
 For the latest version, use the pip installation. This may be more difficult to set up
 and may need additional dependencies and path settings. Setting up a virtual environment is 
-more or less mandatory. If you are not familiar with Python virtual environments, Homebrew 
-is the recommended way.
+highly recommended. If you are not familiar with Python virtual environments, Homebrew
+may be easier.
 
-Install Python from and create a virtual environment. Then, install ESPHome with 
-``pip3 install esphome``. 
+You will require Python 3.9 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
+Python can be installed from the `official site <https://www.python.org/downloads>`_
+or with Homebrew. Once Python is installed, create and activate a virtual environment and install ESPHome with pip:
 
 .. code-block:: console
 
-    $ esphome version
-    Version: 2024.12.4
+    $ python3 -m venv venv      # The last argument is the folder in which to install the virtual environment
+    $ source venv/bin/activate  # For bash or compatible shells. If using a different shell, use activate.csh or activate.fish
+    (venv) $ pip install esphome       # Installs ESPHome in the virtual environment
+    (venv) $ esphome version
+
+Any time you want to use ESPHome, you will need to have activated the virtual environment as shown above. When activated you will see ``(venv)`` at the beginning of your prompt.
 
 **Cloning the repository**
 
